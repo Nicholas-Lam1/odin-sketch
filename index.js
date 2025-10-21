@@ -36,18 +36,20 @@ document.addEventListener("DOMContentLoaded", () => {
     initGrid();
   })();
 
+  // Events for determining whether mouse is being clicked and dragged
   document.addEventListener("mousedown", (e) => {
     isDrawing = true;
     currentButton = e.buttons;
   });
-
   document.addEventListener("mouseup", () => {
     isDrawing = false;
   });
 
+  // Restrict right click menu on grid
   const drawgrid = document.getElementById("drawgrid");
   drawgrid.addEventListener("contextmenu", (e) => e.preventDefault());
 
+  // Setup size input
   const sizeinput = document.getElementById("sizeinput");
   sizeinput.value = gridSize
 
@@ -56,8 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initGrid() {
   const drawgrid = document.getElementById("drawgrid");
+  // Clear grid
   drawgrid.innerHTML = ""
   
+  // Generate grid based on inputted size
   for(var i = 0; i < gridSize ** 2; i++) {
     const drawbox = document.createElement("div");
     drawbox.classList.add("drawbox")
