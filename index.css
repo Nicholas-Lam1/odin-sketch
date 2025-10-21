@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+#drawgrid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vmin; 
+  height: 80vmin;
+  border: 2px solid black;
+}
+
+.drawbox {
+  flex: 0 0 calc(100% / 16); 
+  aspect-ratio: 1;       
+  border: 1px solid black;
+  background-color: white;
+  box-sizing: border-box;
+}
