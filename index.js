@@ -13,6 +13,7 @@ function drag(e) {
   }
 }
 
+// ISSUE: Problem erasing a single tile, just toggles with right click.
 function draw(e) {
   e.target.style.backgroundColor = (e.target.style.backgroundColor === "black" ? "white" : "black")
 }
